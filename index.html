@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="./script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Travel Website</title>
+</head>
+
+<body style="overflow-x: hidden;">
+
+    <div id="home"></div>
+    <section class="w-full h-auto bg-no-repeat bg-fixed bg-cover bg-center pt-8 pb-20"
+        style="background-image: url(./Images/home-bg.jpg)">
+        <nav class="flex justify-around text-white items-center">
+            <span class="text-4xl font-pacifico cursor-pointer text-shadow-[0_1px_2px_black]">Travel</span>
+            <div class="text-base font-lato nav-bar">
+                <a class="nav-items" href="#home" >Home</a>
+                <a class="nav-items" href="#popular" onclick="scrollToSection('#popular')">Popular</a>
+                <a class="nav-items" href="#gallery">Gallery</a>
+                <a class="nav-items" href="#about-us">About Us</a>
+                <a class="nav-items" href="#contact-us">Contact Us</a>
+            </div>
+            <button class="three-bars" onclick="runMenuBar()" onblur="runMenuBar()"><i class="fa-solid fa-bars"></i></button>
+            <div class="menu-bar">
+                <a class="" href="#home">Home</a>
+                <a class="" href="#popular">Popular</a>
+                <a class="" href="#gallery">Gallery</a>
+                <a class="" href="#about-us">About Us</a>
+                <a class="" href="#contact-us">Contact Us</a>
+            </div>
+        </nav>
+
+        <div class="flex justify-center items-center flex-col lg:flex-row">
+            <div class="w-full p-6 mt-16 lg:w-1/2 sm:p-14 max-[525px]:p-4">
+                <h1 class="text-white text-5xl font-lato text-shadow-[0_2px_4px_green] text-center 2xl:text-left sm:text-6xl max-[525px]:text-4xl">Your Next Adventure</h1>
+                <h2 class="text-green-500 text-4xl font-pacifico mt-4 text-shadow-[0_2px_4px_black] text-center 2xl:text-left  max-[525px]:text-3xl">Explore The World With Us</h2>
+                <p class="text-white font-lato text-base mt-4 text-shadow-[0_1px_2px_black] 2xl:text-left text-justify">Step into a world of boundless adventure with our
+                    exceptional travel experiences. Discover
+                    breathtaking destinations, immerse yourself in vibrant cultures, and forge lasting connections. Let
+                    us be your compass to unforgettable journeys, where every moment becomes a cherished memory. Your
+                    next adventure beckons – answer the call of wanderlust and embark on a transformative voyage with
+                    us.</p>
+                <div class="flex justify-center items-center mt-6 2xl:justify-start max-[525px]:flex-col">
+                    <input
+                    class="w-full text-fields text-shadow-[0_1px_2px_black] sm:w-1/2 max-[525px]:mb-5"
+                    type="text" placeholder="Your favourite place...">
+                <button class="btns h-10 w-40 ml-2 max-[525px]:w-full">Search</button>
+                </div>
+
+            </div>
+            <div class="mt-16 w-full flex justify-center items-center lg:w-1/2 max-[525px]:px-4">
+                <div class="grid grid-cols-1 gap-6 place-content-center sm:grid-cols-2">
+                    <div class="home-img">
+                        <img src="./Images/home-pic-1.jpg" alt="">
+                    </div>
+                    <div class="home-img">
+                        <img src="./Images/home-pic-2.jpg" alt="">
+                    </div>
+                    <div class="home-img">
+                        <img src="./Images/home-pic-3.jpg" alt="">
+                    </div>
+                    <div class="home-img">
+                        <img src="./Images/home-pic-4.jpg" alt="">
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div id="popular"></div>
+    <section>
+        <h1 class="text-4xl text-center my-20 font-lato font-bold">Most Popular Destinations</h1>
+        <div class="flex justify-center items-center max-[525px]:px-4">
+
+            <div class="place-content-center grid grid-cols-1 gap-5 2xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2">
+                <div class="popular-holder">
+                    <div class="popular-holder-inner">
+                        <img src="./Images/p-1.jpg" alt="" class="w-full ">
+                    </div>
+                    <p class="popular-name">Lake Baikal, Russia</p>
+                    <span class="popular-price">$1300</span>
+                </div>
+
+                <div class="popular-holder">
+                    <div class="popular-holder-inner">
+                        <img src="./Images/p-2.jpg" alt="" class="w-full ">
+                    </div>
+                    <p class="popular-name">The Azores, Portugal</p>
+                    <span class="popular-price">$900</span>
+                </div>
+
+                <div class="popular-holder">
+                    <div class="popular-holder-inner">
+                        <img src="./Images/p-3.jpg" alt="" class="w-full ">
+                    </div>
+                    <p class="popular-name">Arashiyama Bamboo Grove, Japan</p>
+                    <span class="popular-price">$850</span>
+                </div>
+
+                <div class="popular-holder">
+                    <div class="popular-holder-inner">
+                        <img src="./Images/p-4.jpg" alt="" class="w-full ">
+                    </div>
+                    <p class="popular-name">Na Pali Coast, Hawaii</p>
+                    <span class="popular-price">$2300</span>
+                </div>
+
+                <div class="popular-holder">
+                    <div class="popular-holder-inner">
+                        <img src="./Images/p-5.jpg" alt="" class="w-full ">
+                    </div>
+                    <p class="popular-name">Capri, Italy</p>
+                    <span class="popular-price">$3200</span>
+                </div>
+
+                <div class="popular-holder">
+                    <div class="popular-holder-inner">
+                        <img src="./Images/p-6.jpg" alt="" class="w-full ">
+                    </div>
+                    <p class="popular-name">Cappadocia, Turkey</p>
+                    <span class="popular-price">$1500</span>
+                </div>
+
+                <div class="popular-holder">
+                    <div class="popular-holder-inner">
+                        <img src="./Images/p-7.jpg" alt="" class="w-full ">
+                    </div>
+                    <p class="popular-name">Angel Falls, Venezuela</p>
+                    <span class="popular-price">$2850</span>
+                </div>
+
+                <div class="popular-holder">
+                    <div class="popular-holder-inner">
+                        <img src="./Images/p-8.jpg" alt="" class="w-full ">
+                    </div>
+                    <p class="popular-name">Cliffs of Moher, Ireland</p>
+                    <span class="popular-price">$1450</span>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <div id="gallery"></div>
+    <section>
+        <h1 class="text-4xl text-center my-20 font-lato font-bold">View Gallery</h1>
+        <div class="flex justify-center items-center">
+            <div class="grid grid-cols-1 gap-5 place-content-center 2xl:grid-cols-5 xl:grid-cols-4 lg:grid-cols-3 sm:grid-cols-2 max-[525px]:px-4">
+                <div class="gallery-pic">
+                    <img src="./Images/g-1.jpg" alt="" class="w-full ">
+                </div>
+                <div class="gallery-pic">
+                    <img src="./Images/g-2.jpg" alt="" class="w-full ">
+                </div>
+                <div class="gallery-pic">
+                    <img src="./Images/g-3.jpg" alt="" class="w-full ">
+                </div>
+                <div class="gallery-pic">
+                    <img src="./Images/g-4.jpg" alt="" class="w-full ">
+                </div>
+                <div class="gallery-pic">
+                    <img src="./Images/g-5.jpg" alt="" class="w-full ">
+                </div>
+                <div class="gallery-pic">
+                    <img src="./Images/g-6.jpg" alt="" class="w-full ">
+                </div>
+                <div class="gallery-pic">
+                    <img src="./Images/g-7.jpg" alt="" class="w-full ">
+                </div>
+                <div class="gallery-pic">
+                    <img src="./Images/g-8.jpg" alt="" class="w-full ">
+                </div>
+                <div class="gallery-pic">
+                    <img src="./Images/g-9.jpg" alt="" class="w-full ">
+                </div>
+                <div class="gallery-pic">
+                    <img src="./Images/g-10.jpg" alt="" class="w-full ">
+                </div>
+                <div class="gallery-pic">
+                    <img src="./Images/g-11.jpg" alt="" class="w-full ">
+                </div>
+                <div class="gallery-pic">
+                    <img src="./Images/g-12.jpg" alt="" class="w-full ">
+                </div>
+                <div class="gallery-pic">
+                    <img src="./Images/g-13.jpg" alt="" class="w-full ">
+                </div>
+                <div class="gallery-pic">
+                    <img src="./Images/g-14.jpg" alt="" class="w-full ">
+                </div>
+                <div class="gallery-pic">
+                    <img src="./Images/g-15.jpg" alt="" class="w-full ">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <div id="about-us"></div>
+    <section>
+        <h1 class="text-4xl text-center my-20 font-lato font-bold">About Us</h1>
+        <div class="grid grid-cols-1 2xl:grid-cols-2">
+            <div class="ml-2 mr-2 mb-20 2xl:ml-24 2xl:mr-10">
+                <img src="./Images/about-pic.jpg" alt="" class="w-full h-96 px-4 rounded-md 2xl:h-full 2xl:px-0 sm:px-10">
+            </div>
+            <div class="mr-0 text-justify px-4 mb-12 2xl:text-start 2xl:mb-0 2xl:mr-24 2xl:px-0 sm:px-20">
+                <p class="font-lato text-base">We're passionate about exploring the world and sharing our love for
+                    travel with you. Our mission is
+                    simple: to inspire, inform, and assist fellow adventurers in creating unforgettable journeys.</p>
+                <h2 class="text-lg mt-5 mb-2 font-bold">Why Choose Us?</h2>
+                <h3 class="text-base font-semibold">Expertise</h3>
+                <p>With years of travel experience and a deep love for exploring new horizons, we're your trusted travel
+                    companions.</p>
+                <h3 class="text-base font-semibold">Inspiration</h3>
+                <p>Discover unique destinations, travel tips, and hidden gems through our carefully curated content.</p>
+                <h3 class="text-base font-semibold">Convenience</h3>
+                <p>We're here to make your travel planning easier. Find everything you need to plan your dream trip in
+                    one place.</p>
+            </div>
+        </div>
+
+    </section>
+
+    <div id="contact-us"></div>
+    <section>
+        <h1 class="text-4xl text-center mb-20 mt-2 font-lato font-bold">Contact Us</h1>
+        <div class="flex justify-center items-center flex-col">
+            <p class="font-lato font-semibold text-lg mb-10 text-center">Fill up the form and our team will get back to you within 24
+                hours!</p>
+            <div class="grid grid-cols-1 w-full gap-2 lg:w-1/2 md:w-2/3 sm:grid-cols-2">
+                <input type="text" placeholder="First Name" class="contact-form h-14">
+                <input type="text" placeholder="Last Name" class="contact-form h-14">
+                <input type="text" placeholder="Mail" class="contact-form h-14">
+                <input type="text" placeholder="Phone" class="contact-form h-14">
+                <textarea cols="30" rows="10" class="col-span-1 contact-form pt-5 sm:col-span-2" placeholder="Write your message..."></textarea>
+                <button class="col-span-1 btns h-16 mx-2 md:mx-0 sm:col-span-2">Send Message</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-green-900">
+        <div class="mt-32">
+            <h1 class="font-pacifico text-white text-4xl pt-10 pl-10 text-center">Ready to explore?</h1>
+            <p class="text-base text-white font-lato pl-10 mt-4 text-center">Let's go on a vacation, Make your day</p>
+            <div class="flex justify-center mt-7 max-[525px]:flex-col max-[525px]:mx-4">
+                <input type="text" placeholder="Enter your email..." class="text-fields w-1/2 mr-4 max-[525px]:w-full">
+                <button class="btns w-48 h-10 max-[525px]:w-full max-[525px]:mt-5">Get Started</button>
+            </div>
+        </div>
+
+        <div class="grid gap-5 grid-cols-2 text-center mt-16 pb-10 sm:grid-cols-4 sm:gap-0 max-[525px]:grid-cols-1">
+            <div>
+                <h1 class="footer-h ">Services</h1>
+                <ul>
+                    <li class="footer-links"><a href="#">Email Marketing</a></li>
+                    <li class="footer-links"><a href="#">Compaigns</a></li>
+                    <li class="footer-links"><a href="#">Branding</a></li>
+                    <li class="footer-links"><a href="#">Offline</a></li>
+                </ul>
+            </div>
+            <div>
+                <h1 class="footer-h">About</h1>
+                <ul>
+                    <li class="footer-links"><a href="#">Our Story</a></li>
+                    <li class="footer-links"><a href="#">Benefits</a></li>
+                    <li class="footer-links"><a href="#">Team</a></li>
+                    <li class="footer-links"><a href="#">Careers</a></li>
+                </ul>
+            </div>
+            <div>
+                <h1 class="footer-h">Help</h1>
+                <ul>
+                    <li class="footer-links"><a href="#">FAQS</a></li>
+                    <li class="footer-links"><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h1 class="footer-h">Social</h1>
+                <div class="social-links">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
